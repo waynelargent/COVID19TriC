@@ -8,6 +8,7 @@ namespace COVID19TriC.Models
     {
         public int CaseID { get; set; }
         public bool Quarantined { get; set; }
+        [DataType(DataType.Date)]
         public DateTime DateQuarantineEnds { get; set; }
         public bool CountyNotified { get; set; }
         public string GeneralComments { get; set; }

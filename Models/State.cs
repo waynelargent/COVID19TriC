@@ -8,11 +8,21 @@ namespace COVID19TriC.Models
 {
     public class State
     {
-        public int StateID { get; set; }
-        public enum StateName { AL, AK, AZ, AR, CA, CO, CT, DC, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY }
+        public int  StateID { get; set; }
+        public string StateName { get; set; }
     }
     public class StateDBContext : DbContext
     {
         public DbSet<State> States { get; set; }
+
+        public System.Data.Entity.DbSet<COVID19TriC.Models.Case> Cases { get; set; }
+
+        public System.Data.Entity.DbSet<COVID19TriC.Models.Department> Departments { get; set; }
+
+        public System.Data.Entity.DbSet<COVID19TriC.Models.Location> Locations { get; set; }
+
+        public System.Data.Entity.DbSet<COVID19TriC.Models.Person> People { get; set; }
+
+        public System.Data.Entity.DbSet<COVID19TriC.Models.Status> Status { get; set; }
     }
 }
